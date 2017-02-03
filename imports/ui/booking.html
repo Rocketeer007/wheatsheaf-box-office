@@ -1,0 +1,7 @@
+<template name="booking">
+  <li class="order {{orderStatus}}">
+    <div class="orderNumber">{{orderNumber}}</div>
+    <div class="orderName">{{lastName}}, {{firstName}}</div>
+    <div class="orderSummary">{{#each ticketType in createOrderSummary}}{{ticketType}}<br/>{{/each}}</div>
+  </li>
+</template>

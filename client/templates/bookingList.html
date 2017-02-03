@@ -1,0 +1,17 @@
+<template name="bookingList">
+  <div class="row">
+    {{#HammerTouchArea gestureMap=templateGestures}}
+    <ul class="col-md-12 bookings">
+      <li class="newOrder new">
+        <div class="orderNumber">N/A</div>
+        <div class="orderName">Walk-in Guest</div>
+        <div class="orderSummary">{{#each ticketTypes}}0 x {{description}}<br/>{{/each}}</div>
+      </li>
+      {{#each bookings}}
+        {{> booking}}
+      {{/each}}
+    </ul>
+    {{/HammerTouchArea}}
+  </div>
+  <div class='col-md-12'><p>Tap and hold to checkout as ordered</p></div>
+</template>

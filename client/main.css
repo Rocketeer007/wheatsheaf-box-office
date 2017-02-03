@@ -1,0 +1,126 @@
+/* CSS declarations go here */
+.container {
+  margin: 10px;
+}
+
+.container ul.bookings {
+  padding: 0; /* Remove default padding and all margins */
+  margin: 0;
+  list-style-type: none;
+}
+
+.container ul.bookings li {
+  width: 150px;
+  height: 140px;
+  float: left;
+  margin: 10px;
+  border-radius: 5px;
+  border: 1px solid #e5e5e5;
+  padding: 10px;
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+
+.container ul.bookings li:hover {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .25);
+}
+
+.bookings .orderNumber {
+  text-align: right;
+  color: grey;
+}
+
+.bookings .orderName {
+  text-align: center;
+}
+
+.bookings .orderSummary {
+  text-align: left;
+  vertical-align: bottom;
+  position: absolute;
+  bottom: 0;
+  font-size: smaller;
+}
+
+.bookings li.complete {
+  background-color: lightgreen;
+}
+
+.bookings li.new {
+  background-color: lightgrey;
+}
+
+.container ul.tickets {
+  padding: 0; /* Remove default padding and all margins */
+  margin: 0;
+  list-style-type: none;
+}
+
+.container ul.tickets a,a:hover {
+  color: none;
+  text-decoration: none;
+}
+
+.container ul.tickets li {
+  width: 150px;
+  height: 140px;
+  float: left;
+  margin: 10px;
+  border-radius: 5px;
+  border: 1px solid #e5e5e5;
+  padding: 10px;
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+
+.container ul.tickets li:hover {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .25);
+}
+
+.tickets .seatCode {
+  text-align: right;
+  color: grey;
+}
+
+.tickets .ticketType {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.tickets .price {
+  font-weight: bold;
+  text-align: left;
+  vertical-align: bottom;
+  position: absolute;
+  padding-bottom: 10px;
+  bottom: 0;
+}
+
+.tickets .paymentType {
+  text-align: right;
+  vertical-align: bottom;
+  position: absolute;
+  bottom: 0;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  width: 100%;
+}
+
+.tickets .arrived {
+  text-align: left;
+  vertical-align: top;
+  position: absolute;
+  top: 0;
+  margin-top: 10px;
+}
+
+.tickets li.selected {
+  background-color: yellow;
+}
+
+form.ticketDetails {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}

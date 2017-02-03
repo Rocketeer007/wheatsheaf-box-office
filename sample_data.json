@@ -1,0 +1,80 @@
+db.bookings.insert({
+  orderNumber: 354461,
+  orderStatus: 'reserved',
+  firstName: 'Christine',
+  lastName: 'Brierley',
+  tickets: [{
+    seatCode: 7866200,
+    ticketType: 'Concessions and Children',
+    ticketPrice: 7.00,
+    paymentType: 'Reservation',
+  }],
+});
+db.bookings.insert({
+  orderNumber: 354466,
+  orderStatus: 'reserved',
+  firstName: 'Mrs',
+  lastName: 'Cipher',
+  tickets: [{
+    seatCode: 7866201,
+    ticketType: 'Concessions and Children',
+    ticketPrice: 7.00,
+    paymentType: 'Reservation',
+  },{
+    seatCode: 7866202,
+    ticketType: 'Concessions and Children',
+    ticketPrice: 7.00,
+    paymentType: 'Reservation',
+  }],
+});
+db.bookings.insert({
+  orderNumber: 354623,
+  orderStatus: 'complete',
+  firstName: 'Dave & Alwyn',
+  lastName: 'Frost (c/o Nick)',
+  tickets: [{
+    seatCode: 7866203,
+    ticketType: 'Concessions and Children',
+    ticketPrice: 7.00,
+    paymentType: 'PayPal',
+  },{
+    seatCode: 7866204,
+    ticketType: 'Concessions and Children',
+    ticketPrice: 7.00,
+    paymentType: 'PayPal',
+  }],
+});
+db.bookings.insert({
+  orderNumber: 354524,
+  orderStatus: 'reserved',
+  firstName: 'Mrs',
+  lastName: 'Jones',
+  tickets: [{
+    seatCode: 7866205,
+    ticketType: 'Concessions and Children',
+    ticketPrice: 7.00,
+    paymentType: 'Reservation',
+  },{
+    seatCode: 7866206,
+    ticketType: 'Concessions and Children',
+    ticketPrice: 7.00,
+    paymentType: 'Reservation',
+  }],
+});
+db.bookings.insert({
+  orderNumber: 355699,
+  orderStatus: 'reserved',
+  firstName: 'Shirley',
+  lastName: 'Wilson',
+  tickets: [{
+    seatCode: 7866207,
+    ticketType: 'Complimentary',
+    ticketPrice: 0.00,
+    paymentType: 'Reservation',
+  },{
+    seatCode: 7866208,
+    ticketType: 'Adults',
+    ticketPrice: 8.50,
+    paymentType: 'Reservation',
+  }],
+});

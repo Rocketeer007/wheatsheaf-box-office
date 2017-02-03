@@ -1,0 +1,13 @@
+<template name="newOrder">
+  Process a Walk-in Guest
+  <form class="form-inline ticketDetails">
+  {{#each ticketTypes}}
+    <div class="form-group">
+      <label for="quantity">{{description}}</label>
+      <input type="number" class="form-control" id="quantity" value="0" />
+      </div>
+  {{/each}}
+  </form>
+  <button id="processOrder" type="button" class="btn btn-primary btn-lg btn-block">Checkout</button>
+  <button id="cancel" type="button" class="btn btn-danger btn-lg btn-block">Return to Bookings</button>
+</template>

@@ -1,0 +1,36 @@
+<template name="ticketDetails">
+  OrderNumber {{orderNumber}} - {{firstName}} {{lastName}}<br/>
+  <form class="form-inline ticketDetails" id="ticketForm">
+  {{#each tickets}}
+    {{>ticketForm index=@index ticket=this}}
+  {{/each}}
+  <br/>
+  <div class="col-md-12">
+    <input id="save" type="submit" class="btn btn-primary btn-lg btn-block" value="Save Changes"/>
+    <button id="cancel" type="button" class="btn btn-danger btn-lg btn-block">Cancel Changes</button>
+  </div>
+  </form>
+</template>
+
+<template name="ticketForm">
+  <div class="row">
+    Ticket {{plusOne index}}:
+    <input type="hidden" name="seatCode" value="{{ticket.seatCode}}"/>
+    <div class="form-group">
+      <label class="sr-only" for="ticketType">Ticket Type</label>
+      <select class="form-control ticketType" name="ticketType">
+        {{#each ticketTypes}}
+          <option value="{{key}}" selected="{{isCurrentTicketType ../ticket.ticketType}}">{{description}}</option>
+        {{/each}}
+      </select>
+    </div>
+    <div class="form-group">
+      {{currency getSelectedTicketPrice "£"}}
+    </div>
+    <div class="form-group">
+      <label>Guest has arrived?<input name="hasArrived" type="checkbox" {{hasArrivedChecked}}></label>
+    </div>
+    <button id='delete' type="button" class="btn btn-danger btn-outline btn-sm"><span class="glyphicon glyphicon-trash"></span></button>
+    <br/>
+  </div>
+</template>

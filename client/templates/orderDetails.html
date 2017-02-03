@@ -1,0 +1,28 @@
+<template name="orderDetails">
+  <p class="row col-md-12">Order Number {{orderNumber}} - {{firstName}} {{lastName}}</p>
+  <div class="row">
+    {{#HammerTouchArea gestureMap=templateGestures}}
+    <ul class="tickets">{{#each tickets}}
+      {{> ticket}}
+      {{/each}}
+    </ul>
+    {{/HammerTouchArea}}
+  </div>
+  <div class="col-md-12"><p>Tap and hold to edit individual tickets</p></div>
+  <div class="col-md-12">
+    {{#if anySelected}}<button id="processSelected" type="button" class="btn btn-primary btn-lg btn-block">Checkout Selected</button>{{/if}}
+    <button id="processAll" type="button" class="btn {{#if anySelected}}btn-secondary{{else}}btn-primary{{/if}} btn-lg btn-block">Checkout All</button>
+    <button id="editOrder" type="button" class="btn btn-info btn-lg btn-block">Edit Tickets</button>
+    <button id="cancel" type="button" class="btn btn-danger btn-lg btn-block">Return to Bookings</button>
+  </div>
+</template>
+
+<template name="ticket">
+  <li class="ticket {{isSelected seatCode}} {{isArrived}}">
+    <div class="seatCode">{{seatCode}}</div>
+    <div class="ticketType">{{ticketDescription ticketType}}</div>
+    <div class="price">{{currency ticketPrice "£"}}</div>
+    <div class="paymentType">{{paymentType}}</div>
+    {{> arrived }}
+  </li>
+</template>
